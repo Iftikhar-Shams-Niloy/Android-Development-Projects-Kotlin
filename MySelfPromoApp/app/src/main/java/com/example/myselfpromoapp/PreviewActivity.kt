@@ -1,7 +1,10 @@
 package com.example.myselfpromoapp
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 
@@ -28,6 +31,18 @@ class PreviewActivity : AppCompatActivity() {
 
         var textViewMessage : TextView = findViewById(R.id.text_view_message)
         textViewMessage.text = myMessage
+
+        val sendButton = findViewById<Button>(R.id.button_send_message)
+        fun setupButton(){
+            sendButton.setOnClickListener{
+                val myIntent = Intent(Intent.ACTION_SENDTO).apply {
+                    data = Uri.parse("smsto: $contactNumber")
+                    putExtra("sms_body", "HELLO THERE")
+                }
+                startActivity(myIntent)
+            }
+        }
+
     }
     fun getMyJobTitle(includeJunior:Boolean, jobTitle:String) = if (includeJunior) "Junior $jobTitle" else jobTitle
     fun getMyStartDate(immediateStart:Boolean, startDate:String) = if(immediateStart) "today" else startDate

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_contact_name">Nom du contact</string>
+    <string name="hint_contact_number">Numéro de contact</string>
+    <string name="hint_display_name">Afficher un nom</string>
+    <string name="hint_date">JJ/MM/AAAA</string>
+    <string name="hint_check_box_junior">Inclure Junior</string>
+    <string name="hint_check_box_immediate_start">Démarrage immédiat</string>
+</resources>

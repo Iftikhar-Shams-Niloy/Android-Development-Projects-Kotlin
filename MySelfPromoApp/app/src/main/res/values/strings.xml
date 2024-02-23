@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Self Promo App</string>
+    <string name="app_name" translatable="false">My Self Promo App</string>
+    <string name="hint_contact_name">Contact Name</string>
+    <string name="hint_contact_number">Contact Number</string>
+    <string name="hint_display_name">Display Name</string>
+    <string name="hint_date">DD/MM/YYYY</string>
+    <string name="hint_check_box_junior">Include Junior</string>
+    <string name="hint_check_box_immediate_start">Immediate Start</string>
 </resources>
