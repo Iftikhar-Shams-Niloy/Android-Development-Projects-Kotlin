@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/nav_drive"
+    android:title="@string/driving"
+    android:icon="@drawable/baseline_airport_shuttle_24"/>
+<item android:id="@+id/nav_stop"
+    android:title="@string/stand_by"
+    android:icon="@drawable/baseline_back_hand_24"/>
+</menu>
