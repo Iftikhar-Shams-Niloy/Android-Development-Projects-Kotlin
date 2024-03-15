@@ -15,39 +15,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav"/>
 
-    <Button
-        android:id="@+id/button_study"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        android:paddingHorizontal="45dp"
-        android:layout_margin="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Study"/>
-
-    <Button
-        android:id="@+id/button_break"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintEnd_toStartOf="@id/button_status"
-        app:layout_constraintLeft_toRightOf="@id/button_study"
-        app:layout_constraintStart_toEndOf="@+id/button_study"
-        android:paddingHorizontal="45dp"
-        android:layout_margin="8dp"
-        android:text="Break"/>
-
-    <Button
-        android:id="@+id/button_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintLeft_toRightOf="@id/button_break"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingHorizontal="45dp"
-        android:layout_margin="8dp"
-        android:text="Status"/>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"

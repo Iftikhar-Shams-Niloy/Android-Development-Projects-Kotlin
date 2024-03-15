@@ -6,4 +6,6 @@
     <string name="stand_by">Break</string>
     <string name="status">Status</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="studying">STUDYING</string>
+    <string name="on_a_break">ON A BREAK</string>
 </resources>
