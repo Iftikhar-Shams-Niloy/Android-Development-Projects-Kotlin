@@ -3,6 +3,7 @@ package com.example.mydailyrecord
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -30,18 +31,28 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.reset_studying){}
+        return when(item.itemId){
+            R.id.reset_studying -> { Toast.makeText(this, "RESET STUDY Selected!", Toast.LENGTH_SHORT).show(); true}
+            R.id.reset_breaking -> { Toast.makeText(this, "RESET BREAK Selected!", Toast.LENGTH_SHORT).show(); true}
+            R.id.reset_all -> { Toast.makeText(this, "RESET ALL Selected!", Toast.LENGTH_SHORT).show(); true}
+            else -> {super.onOptionsItemSelected(item)}
+        }
+    }
+
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.nav_study){
-            onStudyClicked()
-            return true
-        } else if(item.itemId == R.id.nav_break){
-            onBreakClicked()
-            return true
-        } else if(item.itemId == R.id.nav_status){
-            onStatusClicked()
-            return true
-        } else {
-            return false
+        return when(item.itemId){
+            R.id.nav_study -> {onStudyClicked(); true}
+            R.id.nav_break -> {onBreakClicked(); true}
+            R.id.nav_status -> {onStatusClicked(); true}
+            else -> false
         }
     }
 

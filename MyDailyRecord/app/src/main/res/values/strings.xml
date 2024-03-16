@@ -8,4 +8,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="studying">STUDYING</string>
     <string name="on_a_break">ON A BREAK</string>
+    <string name="study_break_ratio"><![CDATA[Study & Break Ratio:]]></string>
+    <string name="status_header_text">STATUS</string>
+    <string name="title_activity_edit_studying_record">EditStudyingRecordActivity</string>
 </resources>

@@ -11,12 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDailyRecord"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false">
+        <activity
+            android:name=".EditBreakingRecordActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".EditStudyingRecordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_edit_studying_record"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.MyDailyRecord" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
