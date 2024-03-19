@@ -11,7 +11,7 @@ import com.google.android.material.imageview.ShapeableImageView
 
 class MyAdapter2 (private val storyList:ArrayList<Story>) : RecyclerView.Adapter<MyAdapter2.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item2, parent, false)
         return MyViewHolder(itemView)
     }
 
@@ -26,7 +26,7 @@ class MyAdapter2 (private val storyList:ArrayList<Story>) : RecyclerView.Adapter
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val storyTitleAdapter: TextView = itemView.findViewById(R.id.text_view_title)
-        val storyImageAdapter: ImageView = itemView.findViewById(R.id.image_view_story_image)
+        val storyTitleAdapter: TextView = itemView.findViewById(R.id.text_view_image_title_onlyphotos)
+        val storyImageAdapter: ImageView = itemView.findViewById(R.id.image_view_onlyphotos)
     }
 }
