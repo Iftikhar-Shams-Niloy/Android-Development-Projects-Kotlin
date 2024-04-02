@@ -1,11 +1,14 @@
 package com.example.photodiary
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photodiary.databinding.FragmentAllviewBinding
@@ -21,6 +24,7 @@ class AllviewFragment : Fragment() {
     lateinit var myArrayList: ArrayList<Story>
 
     private lateinit var myBinding : FragmentAllviewBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -66,7 +70,23 @@ class AllviewFragment : Fragment() {
             val newStory = Story(storyImageArray[i],storyTitleArray[i],storyDescriptionArray[i],storyRatingArray[i],storyLocationArray[i])
             myArrayList.add(newStory)
         }
-        myRecylerView.adapter =  MyAdapter(myArrayList)
+        var adapter = MyAdapter(myArrayList)
+        myRecylerView.adapter = adapter
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            // This function down below decides what we want to when we click on an item in a recycler view
+            override fun onItemClick(position: Int) {
+                Log.i("NILOY Tester", myArrayList.elementAt(position).storyTitle)
+                val myStory = myArrayList.elementAt(position)
+                val myIntent = Intent(context, StoryviewActivity::class.java)
+                myIntent.putExtra("storyImage", myStory.storyImage)
+                myIntent.putExtra("storyTitle", myStory.storyTitle)
+                myIntent.putExtra("storyDescription", myStory.storyDescription)
+                myIntent.putExtra("storyRating", myStory.storyRating)
+                myIntent.putExtra("storyLocation", myStory.storyLocation)
+                startActivity(myIntent)
+            }
+
+        })
     }
 
 }

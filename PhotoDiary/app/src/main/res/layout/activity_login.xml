@@ -51,6 +51,7 @@
                     android:paddingLeft="10dp"
                     android:textSize="20sp"
                     android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:hint="Email" />
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -65,6 +66,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:inputType="textPassword"
+                    android:textColorHint="@color/black"
                     android:hint="Password" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
