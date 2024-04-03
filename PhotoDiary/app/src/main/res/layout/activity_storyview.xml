@@ -12,8 +12,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_name"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:cardBackgroundColor="@color/material_dynamic_secondary80">
+            android:layout_height="60dp">
             <TextView
                 android:id="@+id/text_view_story_title"
                 android:layout_width="match_parent"

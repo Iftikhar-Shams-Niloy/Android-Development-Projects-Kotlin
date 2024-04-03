@@ -39,35 +39,42 @@
                     android:textStyle="bold"
                     android:fontFamily="serif-monospace"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_login_email"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
                     android:layout_marginHorizontal="10dp"
-                    android:inputType="textEmailAddress"
-                    android:background="@color/white"
-                    android:paddingVertical="12dp"
-                    android:paddingLeft="10dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:hint="Email" />
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:paddingVertical="12dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:hint="Email" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_login_password"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:paddingVertical="12dp"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:inputType="textPassword"
-                    android:textColorHint="@color/black"
-                    android:hint="Password" />
+                    app:passwordToggleEnabled="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:passwordToggleTint="@color/white">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:inputType="textPassword"
+
+                        android:hint="Password" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -99,9 +106,17 @@
                         app:cornerRadius="5dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/button_login" />
+                        app:layout_constraintTop_toBottomOf="@id/button_login"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
     </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/image_view_google_sign_in"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sign_in_google_button"/>
+
+
 </LinearLayout>

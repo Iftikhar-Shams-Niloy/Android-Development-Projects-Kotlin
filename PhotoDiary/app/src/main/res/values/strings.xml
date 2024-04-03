@@ -5,4 +5,5 @@
     <string name="the_story_location">The Story Location</string>
     <string name="share">Share</string>
     <string name="the_story_title">The Story Title</string>
+    <string name="default_web_client_id">\n</string>
 </resources>

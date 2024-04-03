@@ -39,69 +39,68 @@
                     android:fontFamily="serif-monospace"
                     android:text="Photo Diary Signup"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_first_name"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:inputType="textPersonName"
-                    android:background="@color/white"
-                    android:paddingVertical="12dp"
-                    android:paddingLeft="10dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:hint="First Name" />
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="3dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_signup_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:textColor="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_last_name"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:inputType="textPersonName"
-                    android:background="@color/white"
-                    android:paddingVertical="12dp"
-                    android:paddingLeft="10dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:hint="Last Name" />
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_signup_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:inputType="textEmailAddress"
-                    android:background="@color/white"
-                    android:paddingVertical="12dp"
-                    android:paddingLeft="10dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:hint="Email" />
+                    app:passwordToggleEnabled="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_marginVertical="3dp"
+                    app:passwordToggleTint="@color/white">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_signup_password"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_signup_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="20sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:paddingVertical="12dp"
-                    android:paddingLeft="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:inputType="textPassword"
-                    android:textColorHint="@color/black"
-                    android:hint="Password" />
+                    app:passwordToggleEnabled="true"
+                    android:layout_marginVertical="3dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:passwordToggleTint="@color/white">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_signup_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:inputType="textPassword"
+                        android:hint="Confirm Password"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp">
-
                     <Button
                         android:id="@+id/button_signup"
                         android:layout_width="0dp"
