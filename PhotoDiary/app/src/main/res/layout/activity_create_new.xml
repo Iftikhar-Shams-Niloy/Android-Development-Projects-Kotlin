@@ -41,6 +41,7 @@
             app:cardCornerRadius="10dp"
             app:cardBackgroundColor="@color/black">
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_add_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -51,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/gradient_bg3"/>
                 <ImageView
-                    android:id="@+id/image_view_image"
+                    android:id="@+id/image_view_image_new"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -82,11 +83,13 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_add_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         app:cardElevation="5dp">
                         <TextView
+                            android:id="@+id/text_view_title_new"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="➕ Add Story Title"

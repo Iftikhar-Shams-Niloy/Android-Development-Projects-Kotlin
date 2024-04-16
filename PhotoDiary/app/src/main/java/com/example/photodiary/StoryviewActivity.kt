@@ -1,5 +1,6 @@
 package com.example.photodiary
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.photodiary.databinding.ActivityMainBinding
@@ -22,6 +23,7 @@ class StoryviewActivity : AppCompatActivity() {
 
         getIntentValues()
         setViews()
+        myBinding.cardViewShare.setOnClickListener { shareContent() }
     }
 
     private fun getIntentValues() {
@@ -37,6 +39,14 @@ class StoryviewActivity : AppCompatActivity() {
         myBinding.textViewDescription.text = storyDescription
         myBinding.ratingBarPersonal.rating = storyRating
         myBinding.textViewStoryLocation.text = storyLocation
+    }
+
+    private fun shareContent() {
+        val myIntent = Intent(Intent.ACTION_SEND)
+        myIntent.type = "text/plain"
+        intent.putExtra("DUMMY SHARE NAME!","DUMMY SHARE VALUE!")
+        val myChooser = Intent.createChooser(myIntent, "Share This")
+        startActivity(myChooser)
     }
 
 }

@@ -1,5 +1,6 @@
 package com.example.photodiary
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -30,11 +31,19 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
         myBinding.bottomNav.setOnItemSelectedListener(this)
 
+        myBinding.addNewStory.setOnClickListener { goToCreateNewActivity() }
+
         ////////////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////////////////////////////////////////////
 
     }
+
+    private fun goToCreateNewActivity() {
+        val myIntent = Intent(this, CreateNewActivity::class.java)
+        startActivity(myIntent)
+    }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.nav_allview -> {onAllviewClicked(); true}

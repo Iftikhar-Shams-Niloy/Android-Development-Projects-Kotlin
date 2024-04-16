@@ -77,7 +77,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white">
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
                             android:layout_height="match_parent"
                             android:text="@string/the_story_title"
                             android:textAlignment="center"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </androidx.cardview.widget.CardView>
 
@@ -114,11 +117,13 @@
                                 android:padding="3dp"
                                 android:textSize="13sp"
                                 android:textStyle="bold"
+                                android:textColor="@color/black"
                                 android:text="###########################################################################################################################"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_share"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="bottom"
@@ -132,19 +137,19 @@
                             android:orientation="horizontal"
                             android:layout_gravity="bottom"
                             android:gravity="bottom">
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/share_logo"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:translationY="-2dp"
-                                android:gravity="center"
-                                android:fontFamily="serif-monospace"
-                                android:textStyle="bold"
-                                android:autoSizeTextType="uniform"
-                                android:text="@string/share"/>
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/share_logo"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:translationY="-2dp"
+                                    android:gravity="center"
+                                    android:fontFamily="serif-monospace"
+                                    android:textStyle="bold"
+                                    android:autoSizeTextType="uniform"
+                                    android:text="@string/share"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 

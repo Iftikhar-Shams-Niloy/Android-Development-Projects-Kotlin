@@ -76,14 +76,15 @@ class AllviewFragment : Fragment() {
             // This function down below decides what we want to when we click on an item in a recycler view
             override fun onItemClick(position: Int) {
                 Log.i("NILOY Tester", myArrayList.elementAt(position).storyTitle)
-                val myStory = myArrayList.elementAt(position)
-                val myIntent = Intent(context, StoryviewActivity::class.java)
-                myIntent.putExtra("storyImage", myStory.storyImage)
-                myIntent.putExtra("storyTitle", myStory.storyTitle)
-                myIntent.putExtra("storyDescription", myStory.storyDescription)
-                myIntent.putExtra("storyRating", myStory.storyRating)
-                myIntent.putExtra("storyLocation", myStory.storyLocation)
-                startActivity(myIntent)
+                    val myStory = myArrayList.elementAt(position)
+                    val myIntent = Intent(context, StoryviewActivity::class.java)
+                    myIntent.putExtra("storyImage", myStory.storyImage)
+                    myIntent.putExtra("storyTitle", myStory.storyTitle)
+                    myIntent.putExtra("storyDescription", myStory.storyDescription)
+                    myIntent.putExtra("storyRating", myStory.storyRating)
+                    myIntent.putExtra("storyLocation", myStory.storyLocation)
+                    startActivity(myIntent
+                    )
             }
 
         })
